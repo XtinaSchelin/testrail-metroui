@@ -1,0 +1,133 @@
+/*
+Icon Set:	Broccolidry -- http://dribbble.com/shots/587469-Free-16px-Broccolidryiconsaniconsetitisfullof-icons
+License:	Aribitrary -- http://licence.visualidiot.com/
+
+Icon Set:	Meteocons -- http://www.alessioatzeni.com/meteocons/
+License:	Arbitrary -- http://www.alessioatzeni.com/meteocons/#about
+
+Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
+License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
+
+You can get these here -- http://metroui.org.ua/
+*/
+@font-face {
+    font-family: 'iconFont';
+    src: url('../fonts/iconFont.eot');
+    src: url('../fonts/iconFont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconFont.svg#iconFont') format('svg'), url('../fonts/iconFont.woff') format('woff'), url('../fonts/iconFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div.image a:before {
+    font-family: 'iconFont' !important;
+    content: '\e004' !important;
+    font-size: 36px !important;
+    font-weight: 100 !important;
+    color: #353535 !important;
+}
+div.image a img {
+    display: none !important;
+}
+
+/* Pinning a group. */
+/*
+span#stickyEnable a:before {
+    font-family: 'iconFont' !important;
+    content: '\e004' !important;
+    font-size: 12px !important;
+    color: #000 !important;
+}
+span#stickyEnable a img {
+    display: none !important;
+}
+span#stickyEnable a {
+    text-decoration: none !important;
+}
+*/
+
+/* Print. */
+a[rel="print"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e021' !important;
+    font-size: 16px !important;
+    color: #336 !important;
+}
+a[rel="print"] img {
+    display: none !important;
+}
+
+/* Copy.  Cases, at least. */
+a[onclick*="copyCases"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e011' !important;
+    font-size: 16px !important;
+    color: #336 !important;
+}
+a[onclick*="copyCases"] img {
+    display: none !important;
+}
+
+/* Header sort. */
+th a[onclick*="Grouping"]:nth-child(3):before {
+    font-family: 'iconFont' !important;
+    content: '\e089' !important;
+    font-size: 8px !important;
+    color: #336 !important;
+}
+th a[onclick*="Grouping"]:nth-child(3) img {
+    display: none !important;
+}
+
+/* Group folders. */
+a.caseDroppable:before {
+    font-family: 'iconFont' !important;
+    content: '\e013' !important;
+    font-size: 16px !important;
+    color: #336 !important;
+}
+a.caseDroppable ins.jstree-icon {
+    background-image: none !important;
+}
+
+/* Editing things in a table or in a row. */
+td.action a[href*="/edit/"]:before, span.hoverAction a[href*="edit"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e002' !important;
+    font-size: 8px !important;
+    color: #E3A21A !important;
+}
+td.action a[href*="/edit/"] img, span.hoverAction a[href*="edit"] img {
+    display: none !Important;
+}
+td.action a[href*="/edit/"], span.hoverAction a[href*="edit"] {
+    text-decoration: none !important;
+}
+span.hoverAction a[href*="edit"]:before {
+    font-size: 10px !important;
+}
+
+/* Deleting things in a table. */
+td.action a[onclick*="/delete/"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e084' !important;
+    font-size: 8px !important;
+    color: #B91D47 !important;
+}
+td.action a[onclick*="/delete/"] img {
+    display: none !Important;
+}
+td.action a[onclick*="/delete/"] {
+    text-decoration: none !important;
+}
+
+/* Help icon when editing things. */
+a[href*="/help/"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e086' !important;
+    font-size: 14px !important;
+    color: #2B5797 !important;
+    font-weight: 100 !important;
+}
+a[href*="/help/"] img {
+    display: none !Important;
+}

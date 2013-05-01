@@ -1,0 +1,469 @@
+/* Set up the basic font face. */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzBa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxoUt79146ZFaIJxILcpzmhI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBtIh4imgI8P11RFo6YPCPC0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/u-WUoqrET9fUeobQW7jkRT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+/* General styling. */
+input, select, p, span, a, button, label, div, h1, h2, h3 {
+    font-family: "Open Sans" !important;
+    letter-spacing: 0.02em !important;
+}
+div#breadcrumb {
+    font-size: 11px !important;
+}
+textarea * {
+    font-family: "Segoe UI Mono", "Lucida Sans Typewriter", monospace !important;
+    font-size: 11px !important;
+}
+p, label, td {
+    font-size: 12px !important;
+}
+div.description {
+    font-size: 10px !important;
+}
+
+/* Tidy up the steps boxes. */
+textarea.content, textarea.expected {
+    width: 48% !important;
+    float: left !important;
+    margin-right: 15px !important;
+    height: 100px !important;
+}
+td.content div.title {
+    display: none !important;
+}
+
+/* When editing a test case, the steps container. */
+div.noSteps.emptyContainer {
+    border: none !important;
+    padding-left: 0 !important;
+    background-image: none !important;
+    background-color: #FFF !important;
+}
+div.noSteps.emptyContainer div.empty {
+    background-image: none !Important;
+}
+div.noSteps.emptyContainer div.emptyExplanation {
+    display: none !important;
+}
+div.noSteps.emptyContainer div.empty {
+    width: 600px !important;
+}
+div.noSteps.emptyContainer div.empty div.emptyTitle {
+    display: none !important;
+}
+div.noSteps.emptyContainer div.empty div.emptyBody {
+    margin-left: 0 !important;
+    background-color: #FFF !important;
+}
+
+/* General form element styling. */
+textarea, input {
+    background-image: none !important;
+}
+/* Doesn't work?
+textarea {
+    font-family: "Segoe UI Mono", "Lucida Sans Typewriter", monospace !important;
+}*/
+input[type="text"], input[type="password"], select {
+    font-size: 11px !important;
+    border: 1px solid  #D2D2D2 !important;
+}
+textarea {
+    font-size: 12px !important;
+    border: 1px solid  #D2D2D2 !important;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #2D89EF !important;
+}
+textarea, input[type="text"], input[type="password"] {
+    padding-left: 1px !important;
+}
+/* Exclude the tags box. */
+div#custom_tags_select_chzn input, div#custom_tags_select_chzn input:focus {
+    border: none !important;
+}
+
+/* Messages. */
+div.successPanel {
+    border: 1px solid #00A300 !important;
+    color: #1E7145 !important;
+    background-color: #FFF !important;
+}
+span.errorPanel {
+    border: 1px solid #B91D47 !important;
+    color: #B91D47 !important;
+    background-color: #FFF !important;
+    font-weight: 100 !important;
+    font-size: 12px !important;
+}
+div.emptyContainer, div.hintPanel {
+    border-color: #FFC40D !important;
+}
+div.emptyContainer, div.empty, div.hintPanel {
+    background-color: #FFF !important;
+}
+div.empty {
+    background-image: none !important;
+    width: 100% !important;
+}
+div.hintPanel {
+    color: #C38200 !important;
+}
+div.hintPanel img {
+    display: none !important;
+}
+div.emptyTitle, div.emptyBody {
+    margin-left: 0 !important;
+}
+
+/* Test case section headers. */
+div.section {
+    background-color: #FFF !important;
+    border: none !important;
+}
+div.section div.title, div.section span.title, div.section span.title a,
+  div.legend div.headline {
+    color: #2E92CF !important;
+    font-size: 15px !important;
+}
+div.section div.title, div.section span.title {
+    margin-left: -5px !important;
+}
+
+/* Topmost navigation. */
+div#header {
+    background-image: none !important;
+    background-color: #FFF !important;
+    height: 40px !important;
+    padding-top: 5px !important;
+    margin-top: -5px !important;
+    border-top: 1px solid #CCC !important;
+}
+div#innerLogo a {
+    color: #353535 !important;
+    border-right: 1px solid #CCC !important;
+    padding-right: 15px !important;
+    font-weight: 100 !important;
+}
+div#logo {
+    float: left !important;
+    margin-top: -10px !important;
+}
+div#mainMenu ul {
+    margin-left: 130px !important;
+    margin-top: 5px !important;
+}
+div#mainMenu li a {
+    border: 0 !important;
+    background-color: #FFF !important;
+    color: #999 !important;
+    font-weight: 100 !important;
+    font-size: 14px !important;
+    text-transform: lowercase !important;
+    padding-left: 0 !important;
+}
+div#mainMenu li a.selected, div#mainMenu li a:hover {
+    color: #353535 !important;
+}
+div#mainMenu li.right {
+    float: right !important;
+}
+div#locationBar {
+    display: none !important;
+}
+div#topBar {
+    background-color: #FFF !important;
+}
+div#topBar a, div#topBar a strong {
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+/* Search box.  Incomplete: why can't the border be styled? */
+#searchMenu {
+    margin: 10px 10px 0 10px !important;
+}
+#searchMenu input {
+    background-color: #FFF !important;
+    color: #666 !important;
+}
+#searchMenu input:focus {
+    color: #000 !important;
+    opacity: 1 !important;
+}
+
+/* Popups. */
+div.ui-dialog, div.progressDropdown {
+    border: 0 !important;
+    font-size: 14px !important;
+}
+div.ui-dialog-titlebar, div.progressDropdown div:first-child {
+    background-image: none !important;
+    background-color: #2D89EF !important;
+    font-weight: 100 !important;
+    font-size: 16px !important;
+}
+div.progressDropdown div:first-child {
+    margin: -14px -14px 0 -14px !important;
+    padding: 9px !important;
+    color: #FFF !important;
+}
+div.progressDropdown p {
+    margin: 10px -5px 0 -5px !important;
+}
+div.ui-dialog div.actions {
+    text-align: center !important;
+}
+div.ui-dialog a[class*="dialogAction"] {
+    background-color: #CCC !important;
+    border: 1px solid #CCC !important;
+    width: 50px !important;
+    text-align: center !important;
+    font-weight: 100 !important;
+    color: #353535 !important;
+}
+div.ui-dialog a[class*="dialogAction"] img {
+    display: none !important;
+}
+div.ui-dialog label {
+    font-weight: 100 !important;
+    font-size: 14px !important;
+}
+
+/* Buttons, eventually. */
+.actions a, .actions button, a.buttonLink {
+    background-color: #D2D2D2 !important;
+    background-image: none !important;
+    border-color: #D2D2D2 !important;
+    border-style: solid !important;
+    border-width: 1px;
+    color: #353535 !important;
+    font-weight: 100 !important;
+    font-size: 13px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-shadow: none !important;
+}
+.actions a img, .actions button img {
+    display: none !important;
+}
+.actions a[class="positive"], .actions button[class="positive"] {
+    background-color: #1E7145 !important;
+    border-color: #1E7145 !important;
+    color: #FFF !important;
+}
+.actions a[class="positive"]:hover, .actions button[class="positive"]:hover {
+    background-color: #00A300 !important;
+    border-color: #00A300 !important;
+}
+.actions a[class="negative"], .actions button[class="negative"] {
+    background-color: #C2C2C2 !important;
+    border-color: #C2C2C2 !important;
+    color: #353535 !important;
+}
+.actions a[class="negative"]:hover, .actions button[class="negative"]:hover {
+    background-color: #D2D2D2 !important;
+    border-color: #D2D2D2 !important;
+}
+.actions a[class="negative"], .actions button[class="negative"] {
+    padding-top: 4px !important;
+    padding-bottom: 6px !important;
+}
+input[type="submit"], button[type="submit"], div.actions a[class*="dialogActionDefault"] {
+    font-weight: 600 !important;
+}
+a.buttonLink {
+    background-color: #00A300 !important;
+    color: #EEE !important;
+    padding: 0 !important;
+}
+a.buttonLink span {
+    text-align: center !important;
+    padding: 10px 0 0 0 !important;
+}
+
+/* The various pill boxes. */
+td.box span.statusBox, div.id {
+    border-radius: 0 !important;
+}
+div.id {
+    background-color: #2B5797 !important;
+}
+span.runBox {
+    color: #E3A21A !important;
+    background-color: #FFF !important;
+    font-weight: 600 !important;
+}
+span.suiteBox {
+    color: #99B433 !important;
+    background-color: #FFF !important;
+    font-weight: 600 !important;
+}
+
+/* Sidebar items. */
+div#sidebar h1 {
+    background-color: transparent !important;
+    color: #353535 !important;
+    padding-left: 0 !important;
+    font-size: 14px !important;
+}
+div#sidebar p {
+    padding-left: 5px !important;
+}
+div#sidebar h2 {
+    font-size: 13px !important;
+    font-weight: 100 !important;
+}
+div#sidebar div.innerGroup {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: #DBDBDB !important;
+}
+div#sidebar h1 span.secondary, div#sidebar h1 span.secondary a {
+    color: #2D89EF !important;
+}
+/* Groups. */
+a.caseDroppable ins.jstree-icon {
+    margin-right: -11px !important;
+}
+a.caseDroppable span {
+    vertical-align: top !important;
+}
+a.caseDroppable:hover {
+    border-radius: 0 !important;
+    background-color: #FFF !important;
+    border-color: #FFF !important;
+}
+
+/* The reset-sort item. */
+th a[onclick*="Grouping"]:nth-child(3) {
+    float: left !important;
+}
+
+/* My Settings. */
+div.tabHeader a {
+    background-color: #FFF !important;
+    font-weight: 100 !important;
+    font-size: 14px !important;
+    border: 1px solid #FFF !important;
+    border-bottom: 1px solid #DDD !important;
+}
+div.tabHeader a.current {
+    color: #2D89EF !important;
+    border-top: 1px solid #CCC !important;
+    border-left: 1px solid #CCC !important;
+    border-right: 1px solid #CCC !important;
+    border-bottom: 1px solid #FFF !important;
+}
+div.tabBody {
+    background-color: #FFF !important;
+    border: 1px solid #CCC !important;
+    border-top: 1px solid #FFF !important;
+
+}
+
+/* Administration > main. */
+div.adminColumnContainer, div.adminColumn {
+    border-radius: 0 !important;
+    background-color: #FFF !important;
+    border: 0 !important;
+}
+div.adminColumn {
+    padding-left: 0 !important;
+    background-image: none !important;
+}
+div.adminColumnTitle {
+    background-color: #2D89EF !important;
+    margin: -10px -10px 10px -10px !important;
+    padding: 4px !important;
+    font-size: 13px !important;
+}
+div.adminColumnTitle a {
+    color: #FFF !important;
+}
+div.adminColumnIntro {
+    color: #353535 !important;
+    font-size: 13px !important;
+    margin-left: -7px !important;
+}
+table.grid th {
+    background-color: #2D89EF !important;
+    color: #FFF !important;
+    text-shadow: none !important;
+    font-size: 13px !important;
+    font-weight: 100 !important;
+    border: 0 !important;
+}
+table.grid th a {
+    color: #FFF !important;
+}
+table.grid td {
+    border: none !important;
+}
+
+/* Quick: UI script table. */
+tr[id*="uiscript"] a.inactive {
+    text-decoration: line-through !important;
+}
+
+/* The help icon. */
+a[href*="/help/"] {
+    opacity: 0.5 !important;
+    text-decoration: none !important;
+}
+a[href*="/help/"]:hover {
+    opacity: 1 !important;
+}
+
+/* Pop-up calendar. */
+div#ui-datepicker-div {
+    border: none !important;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 0 !important;
+    background-color: #FFF !important;
+    background-image: none !important;
+}
+div#ui-datepicker-div div.ui-datepicker-header {
+    border-radius: 0 !important;
+    border: none !important;
+    background-image: none !important;
+    background-color: #2D89EF !important;
+    margin: -2px -3px 0 -2px !important;
+}
+div#ui-datepicker-div table tbody tr td a {
+    background: #FFF !important;
+    color: #336 !important;
+}
+div#ui-datepicker-div td a.ui-state-hover {
+    border-color: #2D89EF !important;
+    background: #2D89EF !important;
+    color: #FFF !important;
+}
+div#ui-datepicker-div td.ui-datepicker-today a {
+    border-color: #00A300 !important;
+}
+div#ui-datepicker-div td.ui-datepicker-current-day a {
+    border-color: #E3A21A !important;
+}
