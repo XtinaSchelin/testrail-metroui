@@ -423,8 +423,8 @@ table.grid td {
     border: none !important;
 }
 
-/* Quick: UI script table. */
-tr[id*="uiscript"] a.inactive {
+/* Quick: Customisations table. */
+tr[id*="uiscript"] a.inactive, tr[id*="status"] a.inactive {
     text-decoration: line-through !important;
 }
 
@@ -466,4 +466,4 @@ div#ui-datepicker-div td.ui-datepicker-today a {
 }
 div#ui-datepicker-div td.ui-datepicker-current-day a {
     border-color: #E3A21A !important;
-}
+}    

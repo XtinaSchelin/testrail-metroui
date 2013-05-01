@@ -120,6 +120,25 @@ td.action a[onclick*="/delete/"] {
     text-decoration: none !important;
 }
 
+/* Move things up or down in a table. */
+td.action a[onclick*=".moveUp"]:before {
+    content: '\e091' !important;
+}
+td.action a[onclick*=".moveDown"]:before {
+    content: '\e095' !important;
+}
+td.action a[onclick*=".moveUp"]:before, td.action a[onclick*=".moveDown"]:before {
+    font-family: 'iconFont' !important;
+    font-size: 8px !important;
+    color: #00A300 !important;
+}
+td.action a[onclick*=".moveUp"] img, td.action a[onclick*=".moveDown"] img {
+    display: none !Important;
+}
+td.action a[onclick*=".moveUp"], td.action a[onclick*=".moveDown"] {
+    text-decoration: none !important;
+}
+
 /* Help icon when editing things. */
 a[href*="/help/"]:before {
     font-family: 'iconFont' !important;
