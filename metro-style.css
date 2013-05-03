@@ -111,7 +111,7 @@ div.successPanel {
     color: #1E7145 !important;
     background-color: #FFF !important;
 }
-span.errorPanel {
+span.errorPanel, div.errorPanel {
     border: 1px solid #B91D47 !important;
     color: #B91D47 !important;
     background-color: #FFF !important;
@@ -269,12 +269,12 @@ div.ui-dialog label {
 .actions a img, .actions button img {
     display: none !important;
 }
-.actions a[class="positive"], .actions button[class="positive"] {
+.actions a[class="positive"], .actions button[class="positive"], button[type="submit"] {
     background-color: #1E7145 !important;
     border-color: #1E7145 !important;
     color: #FFF !important;
 }
-.actions a[class="positive"]:hover, .actions button[class="positive"]:hover {
+.actions a[class="positive"]:hover, .actions button[class="positive"]:hover, button[type="submit"]:hover {
     background-color: #00A300 !important;
     border-color: #00A300 !important;
 }
@@ -283,7 +283,7 @@ div.ui-dialog label {
     border-color: #C2C2C2 !important;
     color: #353535 !important;
 }
-.actions a[class="negative"]:hover, .actions button[class="negative"]:hover {
+.actions a[class*="negative"]:hover, .actions button[class="negative"]:hover {
     background-color: #D2D2D2 !important;
     border-color: #D2D2D2 !important;
 }
@@ -305,7 +305,7 @@ a.buttonLink span {
 }
 
 /* The various pill boxes. */
-td.box span.statusBox, div.id {
+td.box span.statusBox, div.id, a.dropdownLink {
     border-radius: 0 !important;
 }
 div.id {
@@ -345,13 +345,13 @@ div#sidebar h1 span.secondary, div#sidebar h1 span.secondary a {
     color: #2D89EF !important;
 }
 /* Groups. */
-a.caseDroppable ins.jstree-icon {
+div#groupTree ul li a ins.jstree-icon {
     margin-right: -11px !important;
 }
-a.caseDroppable span {
+div#groupTree ul li a span {
     vertical-align: top !important;
 }
-a.caseDroppable:hover {
+div#groupTree ul li a:hover {
     border-radius: 0 !important;
     background-color: #FFF !important;
     border-color: #FFF !important;
@@ -428,12 +428,12 @@ tr[id*="uiscript"] a.inactive, tr[id*="status"] a.inactive {
     text-decoration: line-through !important;
 }
 
-/* The help icon. */
-a[href*="/help/"] {
+/* The help/image icons when editing. */
+a[href*="/help/"], a[onclick*="addImage"] {
     opacity: 0.5 !important;
     text-decoration: none !important;
 }
-a[href*="/help/"]:hover {
+a[href*="/help/"]:hover, a[onclick*="addImage"]:hover {
     opacity: 1 !important;
 }
 
@@ -467,3 +467,45 @@ div#ui-datepicker-div td.ui-datepicker-today a {
 div#ui-datepicker-div td.ui-datepicker-current-day a {
     border-color: #E3A21A !important;
 }    
+
+/* Loading more cases; test cases matched. */
+div#loadCases, div#loadTests, div#loadGroups, div#selectCasesMatches {
+    border-radius: 0 !important;
+    background-color: #603CBA !important;
+    color: #FFF !important;
+}
+div#loadCases a, div#loadTests a, div#loadGroups a, div#selectCasesMatches a, div#selectCasesMatches strong {
+    color: #FFF !important;
+}
+
+/* Selected table rows. */
+tr.row[class*="Selected"] {
+    background-color: #FF9 !important;
+}
+
+/* On changing a status for a test run or plan. */
+div#statusDropdown {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5) !important;
+    border: 0 !important;
+}
+div#statusDropdown li {
+    border: 0 !important;
+}
+div#statusDropdown li a {
+    background-color: #FFF !important;
+}
+div#statusDropdown li a:hover {
+    font-weight: 100 !important;
+    background-color: #2D89EF !important;
+    color: #FFF !important;
+}
+
+/* File uploaders. */
+div[aria-labelledby="ui-dialog-title-attachmentDialog"] {
+    width: 420px !important;
+}
+
+/* The action bar. */
+span.icon a {
+    text-decoration: none !important;
+}

@@ -79,13 +79,13 @@ th a[onclick*="Grouping"]:nth-child(3) img {
 }
 
 /* Group folders. */
-a.caseDroppable:before {
+div#groupTree ul li a:before {
     font-family: 'iconFont' !important;
     content: '\e013' !important;
     font-size: 16px !important;
     color: #336 !important;
 }
-a.caseDroppable ins.jstree-icon {
+div#groupTree ul li a ins.jstree-icon {
     background-image: none !important;
 }
 
@@ -107,46 +107,101 @@ span.hoverAction a[href*="edit"]:before {
 }
 
 /* Deleting things in a table. */
-td.action a[onclick*="/delete/"]:before {
+td.action a[onclick*="/delete/"]:before, td.icon a[onclick*="removeEntry"]:before, td a[onclick*="removeColumn"]:before {
     font-family: 'iconFont' !important;
     content: '\e084' !important;
-    font-size: 8px !important;
     color: #B91D47 !important;
 }
-td.action a[onclick*="/delete/"] img {
+td.action a[onclick*="/delete/"]:before, td a[onclick*="removeColumn"]:before {
+    font-size: 8px !important;
+}
+td.icon a[onclick*="removeEntry"]:before {
+    font-size: 14px !important;
+}
+    
+td.action a[onclick*="/delete/"] img, td.icon a[onclick*="removeEntry"] img, td a[onclick*="removeColumn"] img {
     display: none !Important;
 }
-td.action a[onclick*="/delete/"] {
+td.action a[onclick*="/delete/"], td a[onclick*="removeColumn"] {
     text-decoration: none !important;
 }
 
-/* Move things up or down in a table. */
-td.action a[onclick*=".moveUp"]:before {
-    content: '\e091' !important;
-}
-td.action a[onclick*=".moveDown"]:before {
-    content: '\e095' !important;
-}
-td.action a[onclick*=".moveUp"]:before, td.action a[onclick*=".moveDown"]:before {
+/* Move things up or down in a table, or for loading more cases. */
+td.action a[onclick*=".moveUp"]:before, td.action a[onclick*=".moveDown"]:before, div#loadCases:before, div#loadTests:before, td.icon a[onclick*=".moveEntryUp"]:before, td.icon a[onclick*=".moveEntryDown"]:before, td.action a[onclick*=".moveColumnUp"]:before, td.action a[onclick*=".moveColumnDown"]:before {
     font-family: 'iconFont' !important;
     font-size: 8px !important;
     color: #00A300 !important;
 }
-td.action a[onclick*=".moveUp"] img, td.action a[onclick*=".moveDown"] img {
+div#loadCases:before, div#loadTests:before {
+    color: #FFF !important;
+}
+td.action a[onclick*=".moveUp"]:before, td.icon a[onclick*=".moveEntryUp"]:before, td.action a[onclick*=".moveColumnUp"]:before {
+    content: '\e091' !important;
+}
+td.action a[onclick*=".moveDown"]:before, div#loadCases:before, div#loadTests:before, td.icon a[onclick*=".moveEntryDown"]:before, td.action a[onclick*=".moveColumnDown"]:before {
+    content: '\e095' !important;
+}
+td.action a[onclick*=".moveUp"] img, td.action a[onclick*=".moveDown"] img, div#loadCases img, div#loadTests img, td.icon a[onclick*=".moveEntryUp"] img, td.icon a[onclick*=".moveEntryDown"] img, td.action a[onclick*=".moveColumnUp"] img, td.action a[onclick*=".moveColumnDown"] img {
     display: none !Important;
 }
-td.action a[onclick*=".moveUp"], td.action a[onclick*=".moveDown"] {
+td.action a[onclick*=".moveUp"], td.action a[onclick*=".moveDown"], td.action a[onclick*=".moveColumnUp"], td.action a[onclick*=".moveColumnDown"] {
     text-decoration: none !important;
 }
+td.icon a[onclick*=".moveEntryUp"]:before, td.icon a[onclick*=".moveEntryDown"]:before {
+    font-size: 14px !important;
+    margin-left: 4px !important;
+}
 
-/* Help icon when editing things. */
-a[href*="/help/"]:before {
+/* The back/forth icon when adding columns. */
+tr[id="column-cases:title"] td:nth-child(2):before {
     font-family: 'iconFont' !important;
-    content: '\e086' !important;
+    content: '\e0a4' !important;
+    font-size: 14px !important;
+    color: #2B5797 !important;
+    padding-left: 5px !important;
+}
+tr[id="column-cases:title"] td:nth-child(2) img {
+    display: none !Important;
+}
+
+/* Help/Add Image icon when editing things. */
+a[href*="/help/"]:before, a[onclick*="addImage"]:before {
+    font-family: 'iconFont' !important;
     font-size: 14px !important;
     color: #2B5797 !important;
     font-weight: 100 !important;
+    margin-left: 5px !important;
 }
-a[href*="/help/"] img {
+a[href*="/help/"]:before {
+    content: '\e086' !important;
+}
+a[onclick*="addImage"]:before {
+    content: '\e004' !important;
+}
+a[href*="/help/"] img, a[onclick*="addImage"] img {
+    display: none !Important;
+}
+
+/* Subscribe By Email link. */
+a[onclick*=".subscribe"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e01a' !important;
+    font-size: 14px !important;
+    color: #336 !important;
+    font-weight: 100 !important;
+    margin-left: 5px !important;
+}
+a[onclick*=".subscribe"] img {
+    display: none !Important;
+}
+
+/* Export/import items. */
+a[href="#exportDropdown"]:before {
+    font-family: 'iconFont' !important;
+    content: '\e02d' !important;
+    font-size: 14px !important;
+    color: #336 !important;
+}
+a[href="#exportDropdown"] img {
     display: none !Important;
 }
